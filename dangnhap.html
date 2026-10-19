@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <h2>Đăng Nhập</h2>
+        <form onsubmit="xuLyDangNhap(event)">
+            <input type="text" id="username" placeholder="Tài khoản (admin)" required>
+            <input type="password" id="password" placeholder="Mật khẩu (123)" required>
+            <button type="submit">Vào hệ thống</button>
+            <p id="thongBaoLoi" style="color: red; margin-top: 10px; text-align: center;"></p>
+        </form>
+    </div>
+    <script src="js/chung.js"></script>
+</body>
+</html>

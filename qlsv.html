@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sinh viên</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Quản Lý Sinh Viên</h2>
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="qlsv.html" class="active">Quản lý Sinh viên</a>
+        <a href="qlkhoalop.html">Khoa - Lớp</a>
+        <a href="qldiem.html">Quản lý Điểm</a>
+        <a href="#" onclick="xuLyDangXuat()">Đăng xuất</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h3>Quản lý Sinh viên</h3>
+            <button class="btn-logout" onclick="xuLyDangXuat()">Đăng Xuất</button>
+        </div>
+        <div class="content">
+            <div class="box">
+                <h3>Thêm Sinh Viên Mới</h3>
+                <form id="formThemSV">
+                    <div class="form-group">
+                        <label>Mã Sinh Viên:</label>
+                        <input type="text" id="maSV" placeholder="VD: SV001" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Họ và Tên:</label>
+                        <input type="text" id="tenSV" placeholder="Nhập họ tên..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày Sinh:</label>
+                        <input type="date" id="ngaySinh" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Khoa:</label>
+                        <input type="text" id="khoa" placeholder="VD: Công nghệ thông tin" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Lớp:</label>
+                        <input type="text" id="lop" placeholder="VD: CNTT1" required>
+                    </div>
+                    <button type="submit">Thêm Sinh Viên</button>
+                </form>
+            </div>
+
+            <div class="box">
+                <h3>Danh Sách Sinh Viên</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã SV</th>
+                            <th>Họ và Tên</th>
+                            <th>Ngày Sinh</th>
+                            <th>Khoa</th>
+                            <th>Lớp</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bangSinhVien"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/chung.js"></script>
+    <script src="js/qlsv.js"></script>
+</body>
+</html>

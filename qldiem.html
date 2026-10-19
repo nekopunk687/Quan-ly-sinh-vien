@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Điểm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Quản Lý Sinh Viên</h2>
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="qlsv.html">Quản lý Sinh viên</a>
+        <a href="qlkhoalop.html">Khoa - Lớp</a>
+        <a href="qldiem.html" class="active">Quản lý Điểm</a>
+        <a href="#" onclick="xuLyDangXuat()">Đăng xuất</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h3>Quản lý Điểm</h3>
+            <button class="btn-logout" onclick="xuLyDangXuat()">Đăng Xuất</button>
+        </div>
+        <div class="content">
+            <div class="box">
+                <h3>Lọc Lớp Để Nhập Điểm</h3>
+                <div class="form-group">
+                    <label>Chọn Lớp:</label>
+                    <select id="chonLopDiem" onchange="hienThiBangDiem()">
+                        <option value="">-- Chọn Lớp --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Bảng Điểm Sinh Viên</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã SV</th>
+                            <th>Họ Tên</th>
+                            <th>Điểm QT (10%)</th>
+                            <th>Điểm GK (40%)</th>
+                            <th>Điểm CK (60%)</th>
+                            <th>Điểm TB</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bangDiem"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/chung.js"></script>
+    <script src="js/qldiem.js"></script>
+</body>
+</html>
