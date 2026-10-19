@@ -14,7 +14,7 @@ function hienThiSinhVien() {
             <td>${sv.ngaySinh}</td>
             <td>${sv.khoa}</td>
             <td>${sv.lop}</td>
-            <td><button class="delete-btn" onclick="xoaSinhVien('${sv.ma}')">Xóa</button></td>
+            <td><button class="delete-btn" onclick="xoaSinhVien('${i}')">Xóa</button></td>
         `;
         bang.appendChild(tr);
     }
@@ -50,15 +50,9 @@ document.getElementById("formThemSV").addEventListener("submit", function(event)
     hienThiSinhVien();
 });
 
-function xoaSinhVien(maSV) {
-    if (confirm("Bạn có chắc muốn xóa sinh viên mã " + maSV + "?")) {
-        var mangMoi = [];
-        for (var i = 0; i < danhSachSV.length; i++) {
-            if (danhSachSV[i].ma !== maSV) {
-                mangMoi.push(danhSachSV[i]);
-            }
-        }
-        danhSachSV = mangMoi;
+function xoaSinhVien(index) {
+    if (confirm("Bạn có chắc muốn xóa sinh viên này?")) {
+        danhSachSV.splice(index, 1);
         luuDuLieu("dataSinhVien", danhSachSV);
         hienThiSinhVien();
     }
